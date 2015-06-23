@@ -1,5 +1,5 @@
 /****************************************************************************************************
-*   Stanford Theming File
+*   Enthought Theming File (forked from Stanford theming file)
 *
 *   Contains all the theme color definitions for the Stanford Open Source MOOC Project
 *
@@ -185,12 +185,12 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: url('../themes/default/images/sunrise.jpg');
+$homepage-bg-image: url('../themes/enthought/images/sunrise.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
 
-$video-thumb-url: '../themes/default/images/edx.png';
+$video-thumb-url: '../themes/enthought/images/edx.png';
 
 //-----------------
 //  Mixin Styles
