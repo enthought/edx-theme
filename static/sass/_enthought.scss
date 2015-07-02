@@ -5,25 +5,30 @@
 *
 ****************************************************************************************************/
 
+// ----
+// Color variables in Enthought's color palette
+// ----
+@import "colors";
+
 //-----------------
-//  Color variables (from Stanford palette unless noted)
+//  Color variables
 //-----------------
 
 //Main Color Variables
-$main-color: #f7691f;
-$dark-color: #ea281f; //Link Color
+$main-color: $dark-midnight;
+$dark-color: $cornflower; //Link Color
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Main BG Color Variables
 $main-bg: #822537;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
-$main-bg-25: lighten($main-bg, 25%); 
+$main-bg-25: lighten($main-bg, 25%);
 
 //Secondary Color Variables
-$secondary: #b5a4b7;
+$secondary: $sky; // a light purplish shade that shouldn't exist -> #b5a4b7;
 $secondary-50: lighten($secondary, 9%);
-$secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
+$secondary-25: lighten($secondary, 20%); //Important Heading BG Color
 
 //Gray Color Variables
 $gray: #3f3f3f; //Main Text Color
@@ -206,3 +211,6 @@ $video-thumb-url: '../themes/enthought/images/edx.png';
     margin: 0 !important;
     text-align: right;
 }
+
+
+@import "overrides";

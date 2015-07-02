@@ -1,0 +1,21 @@
+// *****************************************************************************
+//
+// Enthought theme style overrides
+//
+// *****************************************************************************
+
+.home>header {
+    border-bottom: 1px solid $cornflower !important;
+}
+
+.highlighted-courses .courses .course,
+.find-courses .courses .course {
+    border: 1px solid $cornflower !important;
+}
+
+.highlighted-courses .courses .course:hover,
+.highlighted-courses .courses .course:focus,
+.find-courses .courses .course:hover,
+.find-courses .courses .course:focus {
+    border: 1px solid $dark-midnight !important;
+}
