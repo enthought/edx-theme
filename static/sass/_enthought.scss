@@ -1,9 +1,5 @@
-// Include and organize all of the theme's CSS overrides
-// in this file. 
-
-// This file is then finally pulled in for a build of
-// lms-main.css in a dynamically generated scss file located
-// at edx-platform/lms/static/sass/lms-course.scss
+// Include and organize all of Enthought theme's SCSS files
+// in this file which is the entry-point for theming edx.
 
 @import "variables";
 @import "mixins";
