@@ -1,0 +1,70 @@
+// *****************************************************************************
+//
+// Enthought theme: additional styles specific to Enthought Training site
+//
+// *****************************************************************************
+
+.wrapper-footer.gray-gradient {
+    // box & layout
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    z-index: 10;
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: smaller;
+    }
+
+    // colors
+    background: transparent none;
+    @include gradient-vertical(lighten($darkgray, 10%), $darkgray);
+
+    a {
+        color: #ccc;
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+
+    // XXX: move to _shame.scss
+    // things that require much higher specificity + important to override
+    // stock styles
+    footer .references {
+        // this sticks to the right-most end of the row it occupies, so...
+        // to space it out from the edge a bit
+        margin-right: 1rem;
+    }
+
+    footer .colophon {
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 1px solid #ccc;
+    }
+}
+
+.nav-colophon {
+    ol { // flexbox container
+        list-style: none;
+        list-style-type: none;
+        // flexbox specific properties
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        li { // flexbox item
+            /*
+            use "order: <int>" property to reorder items in rendering.
+            Shorthand syntax for convenience:
+            flex: <flex-grow> <flex-shrink> <flex-basis> */
+            & + li { margin-left: 1rem; }
+        }
+    }
+}
+
+
