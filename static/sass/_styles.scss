@@ -4,6 +4,11 @@
 //
 // *****************************************************************************
 
+body {
+    // compensate for the fixed footer at the bottom of the page
+    padding-bottom: 2rem;
+}
+
 .wrapper-footer.gray-gradient {
     // box & layout
     position: fixed;
@@ -14,6 +19,10 @@
     z-index: 10;
 
     footer {
+        width: 100%; // this doesn't work due to lower specificity and incorrect source ordering of theme css.
+                     // but we must leave it here for context, and clear intent. If those things are fixed in
+                     // the future, we only need to remove this comment along with the highly specific hacks
+                     // inserted further below or in _shame.scss
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -30,21 +39,6 @@
             color: white;
             text-decoration: underline;
         }
-    }
-
-    // XXX: move to _shame.scss
-    // things that require much higher specificity + important to override
-    // stock styles
-    footer .references {
-        // this sticks to the right-most end of the row it occupies, so...
-        // to space it out from the edge a bit
-        margin-right: 1rem;
-    }
-
-    footer .colophon {
-        margin-right: 1rem;
-        padding-right: 1rem;
-        border-right: 1px solid #ccc;
     }
 }
 
@@ -67,4 +61,4 @@
     }
 }
 
-
+@import "shame"; // Why? See note in _shame.scss
