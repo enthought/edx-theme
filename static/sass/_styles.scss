@@ -24,7 +24,7 @@ body {
                      // the future, we only need to remove this comment along with the highly specific hacks
                      // inserted further below or in _shame.scss
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         font-size: smaller;
     }
@@ -40,6 +40,17 @@ body {
             text-decoration: underline;
         }
     }
+}
+
+.footer-links { // flexbox container, and also a flexbox item for its parent
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.copyright span {
+    color: white;
 }
 
 .nav-colophon {
