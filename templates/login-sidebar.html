@@ -1,0 +1,14 @@
+## mako
+<%! from django.utils.translation import ugettext as _ %>
+
+## Replace the contents of login-sidebar
+<%block name="login_sidebar_content">
+  <div class="cta cta-help">
+    <h3>${_("Need Help?")}</h3>
+    <p>${_("Looking for help in logging in or with your {platform_name} account?").format(platform_name=platform_name)}
+    <a href="https://support.enthought.com/entries/30797510-Welcome-to-Enthought-Training-on-Demand"
+       target="_blank">
+        ${_("View our help section for answers to commonly asked questions.")}
+    </a></p>
+  </div>
+</%block>
