@@ -1,0 +1,45 @@
+// _shame.scss
+//
+// NOTE: use for any bad-form/orphaned scss that knowingly violate edX FED architecture/standards
+// see - http://csswizardry.com/2013/04/shame-css/
+//
+// In the spirit of
+// https://github.com/enthought/edx-platform/blob/release/lms/static/sass/_shame.scss
+// This file is one big FIXME.
+// -----------------------------------------------------------------------------------
+
+// make the selectors even more specific
+body {
+    &.view-register .wrapper-footer footer,
+    &.view-login .wrapper-footer footer,
+    &.view-passwordreset .wrapper-footer footer {
+        width: 100%;
+    }
+}
+
+.wrapper-footer.gray-gradient {
+    // require much higher specificity to override
+    // stock styles
+    footer .references {
+        // this sticks to the right-most end of the row it occupies, so...
+        // to space it out from the edge a bit
+        margin-right: 1rem;
+    }
+
+    footer .colophon {
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 1px solid #ccc;
+    }
+}
+
+// FIX [1] -- increasing specificity
+body footer {
+    margin-top: 0;
+}
+
+// wonderful moments:
+// [1]  No idea why /account/settings includes both
+//      lms-course.css and lms-main.css . lms-course adds a
+//      large top margin to the footer that needs to be
+//      cancelled for our theme.
