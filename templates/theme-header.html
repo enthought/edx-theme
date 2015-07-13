@@ -5,6 +5,11 @@
 
 ## TODO: this will eventually be moved to the Sass
 <%block name="navigation_logo">
-  <img src="${static.url('themes/enthought/images/ETOD-logo-blue-grey.png')}" height="50" alt="Home Page" />
+  <img src="${static.url('themes/enthought/images/ETOD-logo-blue-grey.png')}" height="50" alt="Enthought Training" />
 </%block>
 
+## Register link removed -- overriding the nav_global_register_link block
+## in navigation.html template located at edx-platform/lms/templates/
+##
+## REGISTER BUTTONS ARE NOT REQUIRED FOR ENTHOUGHT'S TRAINING PILOT PROJECT
+<%block name="nav_global_register_link" />
