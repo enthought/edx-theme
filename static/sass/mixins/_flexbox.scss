@@ -8,6 +8,10 @@
 // This set of mixins only include the flexbox
 // mixins that we used for layout -- this is
 // not the exhaustive list
+//
+// TODO: add all the most commonly used flex-container
+// and flex-item properties in the following convenience
+// mixins.
 
 @mixin display-flex() {
   display: -webkit-box;
