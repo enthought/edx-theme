@@ -17,6 +17,8 @@ section.home > header,
 }
 
 // more specific overrides for the courses and search pages
+section.home > header,
+section.course-info header.course-profile,
 section.find-courses header.search,
 section.university-profile header.search {
     margin-top: 0;
