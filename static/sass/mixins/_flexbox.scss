@@ -1,0 +1,57 @@
+// Convenience mixins for the flexbox properties
+// we used for layout
+//
+// based on autoprefixer output as of 2015-07-17
+// this is because we can't yet incorporate
+// autoprefixer itself into the build-deploy cycle
+// of this project.
+// This set of mixins only include the flexbox
+// mixins that we used for layout -- this is
+// not the exhaustive list
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin row-nowrap() {
+  -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+}
+
+@mixin space-between() {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@mixin space-around() {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+@mixin flex-start() {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@mixin flex-end() {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@mixin align-items-center() {
+  -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
