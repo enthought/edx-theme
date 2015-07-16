@@ -1,8 +1,7 @@
-// *****************************************************************************
 //
 // Enthought theme: additional styles specific to Enthought Training site
 //
-// *****************************************************************************
+// ----------------------------------------------------------------------
 
 body {
     // compensate for the fixed footer at the bottom of the page
@@ -17,6 +16,12 @@ section.home > header,
     background-position: center top;
 }
 
+// more specific overrides for the courses and search pages
+section.find-courses header.search,
+section.university-profile header.search {
+    margin-top: 0;
+}
+
 .wrapper-footer.gray-gradient {
     // box & layout
     position: fixed;
@@ -27,13 +32,7 @@ section.home > header,
     z-index: 10;
 
     footer {
-        width: 100%; // this doesn't work due to lower specificity and incorrect source ordering of theme css.
-                     // but we must leave it here for context, and clear intent. If those things are fixed in
-                     // the future, we only need to remove this comment along with the highly specific hacks
-                     // inserted further below or in _shame.scss
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 100%;
         font-size: smaller;
     }
 
@@ -50,13 +49,6 @@ section.home > header,
     }
 }
 
-.footer-links { // flexbox container, and also a flexbox item for its parent
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .copyright span {
     color: white;
 }
@@ -65,10 +57,7 @@ section.home > header,
     ol { // flexbox container
         list-style: none;
         list-style-type: none;
-        // flexbox specific properties
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
+
 
         li { // flexbox item
             /*
@@ -79,5 +68,32 @@ section.home > header,
         }
     }
 }
+
+/* Flexbox layouts */
+.flexbox, .flexboxlegacy {
+    .wrapper-footer.gray-gradient {
+        footer {
+            @include display-flex();
+            @include space-between();
+            @include align-items-center();
+        }
+    }
+
+    .footer-links { // flexbox container, and also a flexbox item for its parent
+        @include display-flex();
+        @include row-nowrap();
+        @include flex-end();
+        @include align-items-center();
+    }
+
+    .nav-colophon {
+        ol {
+            @include display-flex();
+            @include row-nowrap();
+            @include flex-start();
+        }
+    }
+}
+
 
 @import "shame"; // Why? See note in _shame.scss
