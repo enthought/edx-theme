@@ -9,6 +9,14 @@ body {
     padding-bottom: 2rem;
 }
 
+// overriding .home > header with more specific
+// section.home > header
+section.home > header,
+.course-info header.course-profile {
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
 .wrapper-footer.gray-gradient {
     // box & layout
     position: fixed;
