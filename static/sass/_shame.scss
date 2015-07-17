@@ -10,6 +10,7 @@
 
 // make the selectors even more specific
 body {
+    // FIX [1]
     &.view-register .wrapper-footer footer,
     &.view-login .wrapper-footer footer,
     &.view-passwordreset .wrapper-footer footer {
@@ -33,13 +34,16 @@ body {
     }
 }
 
-// FIX [1] -- increasing specificity
+// FIX [2] -- increasing specificity
 body footer {
     margin-top: 0;
 }
 
-// wonderful moments:
-// [1]  No idea why /account/settings includes both
+// edge cases:
+// [1]  footer needs to be 100%, but it won't work without
+//      these highly specific selectors due to inverted source
+//      order of theme and edx-platform css.
+// [2]  /account/settings in edx includes both
 //      lms-course.css and lms-main.css . lms-course adds a
 //      large top margin to the footer that needs to be
 //      cancelled for our theme.

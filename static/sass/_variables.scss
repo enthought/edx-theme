@@ -42,7 +42,18 @@ $white: $gray-1;
 $black: #2e2e2e;
 $black-80: #585858;
 
+//-----------------
+//  Font variables
+//-----------------
+$sans-serif: sans-serif !default;
+$serif: serif !default;
 
+//-----------------
+//  Other variables
+//-----------------
+//  that may or may not be already assigned values,
+//  hence the "!default" keyword
+$baseline: 20px !default;
 
 //-----------------
 //  Font Assignment
