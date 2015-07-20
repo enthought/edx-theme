@@ -24,6 +24,21 @@ section.university-profile header.search {
     margin-top: 0;
 }
 
+// more specific overrides for the overlay
+section.home > header {
+    .title {
+        width: 100%;
+        margin: 0;
+    }
+
+    .outer-wrapper {
+        width: 40%;
+        min-width: 550px;
+        margin: auto;
+    }
+}
+
+
 section.home > header .title > hgroup h2,
 section.home > header .title > hgroup section.outside-app h1,
 section.outside-app .home > header .title > hgroup h1 {
