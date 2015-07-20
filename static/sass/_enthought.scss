@@ -8,5 +8,5 @@
 // css imports -- that should bubble up to the top of the final css
 $sans-family: unquote("Droid+Sans");
 $serif-family: unquote("Crimson+Text");
-@import url(http://fonts.googleapis.com/css?family=#{$sans-family});
-@import url(http://fonts.googleapis.com/css?family=#{$serif-family});
+@import url(//fonts.googleapis.com/css?family=#{$sans-family});
+@import url(//fonts.googleapis.com/css?family=#{$serif-family});
