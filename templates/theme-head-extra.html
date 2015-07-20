@@ -1,6 +1,8 @@
 ## mako
-
 <%namespace name='static' file='/static_content.html'/>
+
+<%! from django.utils.translation import ugettext as _ %>
+
 <%block name="headextra">
   <script type="text/javascript" src="/static/themes/enthought/js/vendor/modernizr.custom.js"></script>
 </%block>
