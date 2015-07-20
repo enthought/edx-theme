@@ -24,6 +24,12 @@ section.university-profile header.search {
     margin-top: 0;
 }
 
+section.home > header .title > hgroup h2,
+section.home > header .title > hgroup section.outside-app h1,
+section.outside-app .home > header .title > hgroup h1 {
+    text-transform: none;
+}
+
 .wrapper-footer.gray-gradient {
     // box & layout
     position: fixed;
