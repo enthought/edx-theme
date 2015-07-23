@@ -39,6 +39,11 @@ body footer {
     margin-top: 0;
 }
 
+// FIX [3]
+header.global .user>.primary:last-child>a {
+    line-height: 0.9em;
+}
+
 // edge cases:
 // [1]  footer needs to be 100%, but it won't work without
 //      these highly specific selectors due to inverted source
@@ -47,3 +52,7 @@ body footer {
 //      lms-course.css and lms-main.css . lms-course adds a
 //      large top margin to the footer that needs to be
 //      cancelled for our theme.
+// [3]  The bottom padding was designed for the original fonts
+//      used on openedx, but mis-aligns slightly with the newly
+//      used Enthought fonts. Reducing line-height to contain
+//      it within the dropdown button's box fixes this.
