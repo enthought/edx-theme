@@ -3,7 +3,7 @@
 // NOTE: use for any bad-form/orphaned scss that knowingly violate edX FED architecture/standards
 // see - http://csswizardry.com/2013/04/shame-css/
 //
-// In the spirit of
+// edx-platform uses the same convention here:
 // https://github.com/enthought/edx-platform/blob/release/lms/static/sass/_shame.scss
 // This file is one big FIXME.
 // -----------------------------------------------------------------------------------
@@ -44,6 +44,45 @@ header.global .user>.primary:last-child>a {
     line-height: 0.9em;
 }
 
+// FIX [4]
+
+// overriding .home > header with more specific
+// section.home > header
+section.home > header,
+.course-info header.course-profile {
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+// more specific overrides for the courses and search pages
+section.home > header,
+section.course-info header.course-profile,
+section.find-courses header.search,
+section.university-profile header.search {
+    margin-top: 0;
+}
+
+// more specific overrides for the overlay
+section.home > header {
+    .title {
+        width: 100%;
+        margin: 0;
+    }
+
+    .outer-wrapper {
+        width: 40%;
+        min-width: 550px;
+        margin: auto;
+    }
+}
+
+section.home > header .title > hgroup h2,
+section.home > header .title > hgroup section.outside-app h1,
+section.outside-app .home > header .title > hgroup h1 {
+    text-transform: none;
+}
+// FIX [4] done
+
 // edge cases:
 // [1]  footer needs to be 100%, but it won't work without
 //      these highly specific selectors due to inverted source
@@ -56,3 +95,8 @@ header.global .user>.primary:last-child>a {
 //      used on openedx, but mis-aligns slightly with the newly
 //      used Enthought fonts. Reducing line-height to contain
 //      it within the dropdown button's box fixes this.
+// [4]  Fixing other overrides that also require higher specificity
+//      of selectors just to overcome the inverse source order
+//      of theme inserted before the edx-platform styles.
+//      See: edx-platform/lms/static/sass/lms-main.scss.mako for
+//      for example.
