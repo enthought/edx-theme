@@ -8,42 +8,6 @@ body {
     padding-bottom: 2rem;
 }
 
-// overriding .home > header with more specific
-// section.home > header
-section.home > header,
-.course-info header.course-profile {
-    background-repeat: no-repeat;
-    background-position: center top;
-}
-
-// more specific overrides for the courses and search pages
-section.home > header,
-section.course-info header.course-profile,
-section.find-courses header.search,
-section.university-profile header.search {
-    margin-top: 0;
-}
-
-// more specific overrides for the overlay
-section.home > header {
-    .title {
-        width: 100%;
-        margin: 0;
-    }
-
-    .outer-wrapper {
-        width: 40%;
-        min-width: 550px;
-        margin: auto;
-    }
-}
-
-
-section.home > header .title > hgroup h2,
-section.home > header .title > hgroup section.outside-app h1,
-section.outside-app .home > header .title > hgroup h1 {
-    text-transform: none;
-}
 
 .wrapper-footer.gray-gradient {
     // box & layout
