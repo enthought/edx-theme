@@ -81,9 +81,39 @@ section.home > header .title > hgroup section.outside-app h1,
 section.outside-app .home > header .title > hgroup h1 {
     text-transform: none;
 }
+
+// Override the login cta hover colors.
+
+.cta-login .cta-login-action {
+    &:hover, &:active, &:focus {
+        section.login aside &,
+        section.register aside &,
+        section.passwordreset aside &,
+        #forgot-password-modal #password-reset aside & {
+            background-color: $cornflower;
+        }
+    }
+
+    section.login aside &,
+    section.register aside &,
+    section.passwordreset aside &,
+    #forgot-password-modal #password-reset aside & {
+        color: $cornflower;
+    }
+}
+
+section.login-register .login-provider {
+    &:hover, &:active, &:focus {
+        background-color: $cornflower;
+    }
+
+    color: $cornflower;
+}
+
+
 // FIX [4] done
 
-// edge cases:
+// the issues:
 // [1]  footer needs to be 100%, but it won't work without
 //      these highly specific selectors due to inverted source
 //      order of theme and edx-platform css.
