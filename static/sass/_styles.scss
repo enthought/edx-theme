@@ -36,51 +36,34 @@ body {
     }
 }
 
-.copyright span {
-    color: white;
-}
+.copyright {
+    float: left;
 
-.nav-colophon {
-    ol { // flexbox container
-        list-style: none;
-        list-style-type: none;
-
-
-        li { // flexbox item
-            /*
-            use "order: <int>" property to reorder items in rendering.
-            Shorthand syntax for convenience:
-            flex: <flex-grow> <flex-shrink> <flex-basis> */
-            & + li { margin-left: 1rem; }
-        }
+    span {
+        color: white;
     }
 }
 
-/* Flexbox layouts */
-.flexbox, .flexboxlegacy {
-    .wrapper-footer.gray-gradient {
-        footer {
-            @include display-flex();
-            @include space-between();
-            @include align-items-center();
-        }
-    }
+.footer-links {
+    float: right;
 
-    .footer-links { // flexbox container, and also a flexbox item for its parent
-        @include display-flex();
-        @include row-nowrap();
-        @include flex-end();
-        @include align-items-center();
-    }
+    .colophon {
+        display: inline-block;
 
-    .nav-colophon {
         ol {
-            @include display-flex();
-            @include row-nowrap();
-            @include flex-start();
+            list-style: none;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin-left: 1rem;
+            }
         }
     }
-}
 
+    .references {
+        display: inline-block;
+    }
+}
 
 @import "shame"; // Why? See note in _shame.scss
